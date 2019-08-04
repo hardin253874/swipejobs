@@ -22,8 +22,8 @@ export class JobCardComponent implements OnInit {
 
   getShiftRange(){
     if(this.job && this.job.shifts && this.job.shifts.length > 0) {
-      const firstShift = this.job.shifts[0];
-      const lastShift = this.job.shifts[this.job.shifts.length - 1];
+      const firstShift = this.job.shifts[0].startDate;
+      const lastShift = this.job.shifts[this.job.shifts.length - 1].startDate;
 
       return moment(firstShift).format('ddd MMM D') + ' - ' +  moment(lastShift).format('ddd MMM D');
 
