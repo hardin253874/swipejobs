@@ -1,0 +1,61 @@
+<nav class="navbar p-0 navbar-expand-sm fixed-top navbar-dark bg-nav app-navbar" [ngClass]="{'bg-property-dropdown' : isNavbarCollapsed}">
+
+  <div>
+    <a class="navbar-brand mr-1" routerLink="" routerLinkActive="active" ></a>
+
+
+
+    <div class="property-box mr-auto float-right" *ngIf="isNavbarCollapsed">
+      <div class="nav-item dropdown property-filter"
+           ngbDropdown placement="bottom-right">
+        <div class="float-right text-white cursor-point" ngbDropdownToggle>
+
+        </div>
+
+
+      </div>
+
+      <!--//todo don't show property link if only one. can be discussed later.-->
+      <!--<a class="nav-link" routerLink=""-->
+      <!--*ngIf="portalSession.currentTenant && portalSession.tenants && portalSession.tenants.length === 1">-->
+      <!--{{portalSession.currentTenant.LotId | addressText}}-->
+      <!--</a>-->
+    </div>
+    <div class="ml-5 mr-2 d-sm-none float-right"></div>
+  </div>
+
+
+  <div class="float-right d-md-none ml-auto" ngbDropdown placement="bottom-right">
+    <button class="btn btn-default navbar-btn bg-nav text-white float-right cursor-point" ngbDropdownToggle type="button">
+      <span class="icon icon-menu icon-2x"></span>
+    </button>
+    <div class="dropdown-menu dropdown-menu-right text-large" ngbDropdownMenu>
+      <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="collapseMenu()">
+        Home
+      </a>
+      <a class="nav-link " routerLink="/transactions" routerLinkActive="active" (click)="collapseMenu()">
+        Transactions
+      </a>
+      <a class="nav-link" routerLink="/activities" routerLinkActive="active" (click)="collapseMenu()">
+        Activity
+      </a>
+      <a class="nav-link" routerLink="/documents" routerLinkActive="active" (click)="collapseMenu()">
+        Document
+      </a>
+    </div>
+  </div>
+
+  <div class="float-right d-none d-md-block ml-auto" ngbDropdown placement="bottom-right">
+    <button class="btn btn-default navbar-btn bg-nav text-white float-right  cursor-point" ngbDropdownToggle type="button">
+      <span class="icon icon-menu icon-2x"></span>
+    </button>
+    <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+       <a class="dropdown-item" routerLinkActive="active" routerLink="/">Home</a>
+      <a class="dropdown-item" routerLinkActive="active" routerLink="/">Home</a>
+      <a class="dropdown-item" routerLinkActive="active" routerLink="/transactions">Transactions</a>
+      <a class="dropdown-item" routerLinkActive="active" routerLink="/activities">Activity</a>
+      <a class="dropdown-item" routerLinkActive="active" routerLink="/documents">Document</a>
+    </div>
+  </div>
+</nav>
+

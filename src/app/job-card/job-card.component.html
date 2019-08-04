@@ -1,0 +1,58 @@
+
+<div class="card-body" >
+  <div class="row">
+    <div class="col-12">
+      <div class="card card-profile visible-md-block visible-lg-block mb-2" >
+        <div class="card-body">
+          <div class="row">
+            <div class="col-3">
+              <img class="company-log" src="{{job.company.logo}}">
+            </div>
+            <div class="col-9">
+              <div class="card-title h5">{{job.title}}</div>
+              <div class="text-muted">{{job.company.name}}</div>
+              <div class=" text-muted">{{ job.wagePerHourInCents | wageCurrency}}</div>
+              <div class="text-muted"><strong>{{getShiftRange()}}</strong></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card-title h6">If you take this job you are agreeing to work ALL DAYS.</div>
+            </div>
+          </div>
+          <div *ngFor="let shift of job.shifts" class="row">
+            <div class="col-12 text-muted">
+               {{shift.startDate | shiftDate : 'WA'}}
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12 text-muted">
+              Location
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-muted">
+            <a href>{{job.company.address}}</a>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12 text-muted">
+              Branch
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-muted">
+              {{job.branch}}<br>
+              <a href>{{job.branchPhoneNumber}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-feedback-card></app-feedback-card>
+    </div>
+
+  </div>
+
+    </div>
