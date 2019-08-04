@@ -4,8 +4,7 @@ import {JobService} from './services/job.service';
 import * as moment from 'moment';
 @Component({
   selector: 'app-job-card',
-  templateUrl: './job-card.component.html',
-  styleUrls: ['./job-card.component.scss']
+  templateUrl: './job-card.component.html'
 })
 export class JobCardComponent implements OnInit {
 
