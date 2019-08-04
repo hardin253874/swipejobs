@@ -6,7 +6,7 @@ import * as momentTz from 'moment-timezone';
 })
 
 export class ShiftDatePipe implements PipeTransform {
-  transform(value?: string, state: string) {
+  transform(value?: string, state?: string) {
     // need to show 0
     if (!value || !moment(value).isValid()){
       return null;
