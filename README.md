@@ -1,6 +1,10 @@
 # SwipejobsApp
 
-To present the page to show the job detail card which can be viewed both of web browser and mobile device.  it required the css style to support it and for this purpose I download the standard bootstrap class to add in project to show the style. 
+To present the page to show the job detail card which can be viewed both of web browser and mobile device.  
+
+![My image](hardin253874/img/master/swipeImage-1.JPG)
+
+it required the css style to support it and for this purpose I download the standard bootstrap class to add in project to show the style. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
